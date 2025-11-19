@@ -1,0 +1,148 @@
+*{
+    font-family:"Handlee",static ;
+}
+
+body {
+  background-image: url("background_image2.jpg");
+  background-size: cover;      
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  background-position: center;  
+}
+
+.title{
+    text-align: center;
+    flex:1 1 50px;
+    color: #f1b4bb;
+    font-size: 2.5em;
+    border: 3px;
+    border-color: mistyrose;
+    text-shadow:
+    -1px -1px 0 #f6a6a6,
+     1px -1px 0 #f6a6a6,
+    -1px  1px 0 #f6a6a6,
+     1px  1px 0 #f6a6a6;
+     margin-bottom: 0.5em;
+}
+
+.flower-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+
+.flower-card {
+  display: grid;
+  grid-template-columns: 120px 1fr; 
+  align-items: center;
+  gap: 20px;
+  background-color: rgb(255, 225, 228, 0.7);
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 18px 22px;
+  transition:
+        transform 0.4s ease,
+        box-shadow 0.6s ease,
+        background-color 0.8s ease,
+        border-color 1s ease;
+  border: 2px solid transparent;
+}
+
+
+.flower-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  border-color: #E3A5C7; 
+}
+
+
+.flower-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+  background-color:rgb(254, 245, 246, 0.7);
+  padding: 6px;
+}
+
+.flower-info h3 {
+  margin: 0 0 6px;
+  font-size: 2rem;
+  color: #f1b4bb;
+  font-weight: 600;
+}
+
+.flower-info p {
+  margin: 0;
+  color: #f1b4bb;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .flower-card {
+    grid-template-columns: 1fr; 
+    text-align: center;
+  }
+
+  .flower-card img {
+    max-width: 160px;
+    margin: 0 auto;
+  }
+}
+
+.corner-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.menu-icon {
+    font-size: 32px;
+    background-color: rgba(255, 225, 230, 0.8);
+    padding: 10px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-icon:hover {
+    transform: scale(1.07);
+    background-color: rgba(241, 180, 187, 0.9);
+}
+
+.dropdown-box {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgba(255, 225, 230, 0.95);
+    border-radius: 10px;
+    padding: 12px 0;
+    width: 200px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.corner-menu:hover .dropdown-box {
+    display: block;
+}
+
+.dropdown-box a {
+    display: block;
+    padding: 10px 15px;
+    color: #F1B4BB;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-box a:hover {
+    background-color: rgba(241, 180, 187, 0.3);
+}
+
+
