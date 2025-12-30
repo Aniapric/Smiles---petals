@@ -1,0 +1,207 @@
+*{ font-family:"Handlee", static; }
+html{ scroll-behavior:smooth; }
+
+body{
+  background-image: url("background_image2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+}
+
+/* dropdown */
+.corner-menu { position: fixed; top: 20px; right: 20px; z-index: 9999; }
+
+.menu-icon{
+  font-size: 32px;
+  background-color: rgba(255, 225, 230, 0.8);
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.menu-icon:hover{ transform: scale(1.07); background-color: rgba(241, 180, 187, 0.9); }
+
+.dropdown-box{
+  display:none;
+  position:absolute;
+  top:60px;
+  right:0;
+  background-color: rgba(255, 225, 230, 0.95);
+  border-radius: 10px;
+  padding: 12px 0;
+  width: 220px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.corner-menu:hover .dropdown-box{ display:block; }
+
+.dropdown-box a{
+  display:block;
+  padding:10px 15px;
+  color:#F1B4BB;
+  text-decoration:none;
+  font-size:18px;
+  font-weight:bold;
+  transition: background-color 0.3s ease;
+}
+.dropdown-box a:hover{ background-color: rgba(241, 180, 187, 0.3); }
+
+/* page layout */
+.page{
+  width: min(1100px, 92%);
+  margin: 35px auto 40px;
+}
+
+h1{
+  text-align: center;
+  color:#F1B4BB;
+  font-size: 4em;
+  text-shadow:
+    -1px -1px 0 #f6a6a6,
+     1px -1px 0 #f6a6a6,
+    -1px  1px 0 #f6a6a6,
+     1px  1px 0 #f6a6a6;
+  margin: 10px 0 1.5em; /* container mai jos */
+}
+
+.box{
+  background-color: rgba(255, 216, 217, 0.78);
+  border-radius: 22px;
+  padding: 22px 24px;
+  box-shadow: 0 18px 55px rgba(0,0,0,0.12);
+  backdrop-filter: blur(2px);
+}
+
+.section-title{
+  color:#d1949b;
+  font-size: 2.2em;
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+.hr-soft{
+  border: none;
+  height: 4px;
+  background-color: rgba(246, 193, 199, 0.9);
+  border-radius: 6px;
+  margin: 14px 0 18px;
+}
+
+.notice{
+  color:#d1949b;
+  font-size: 1.6em;
+  font-weight: bold;
+  margin: 0 0 18px;
+}
+
+.btn{
+  display: inline-block;
+  text-decoration: none;
+  background-color: rgba(241, 180, 187, 0.85);
+  color: #fff3f3;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: transform .2s ease, background-color .2s ease;
+}
+.btn:hover{ transform: scale(1.03); background-color: rgba(225, 175, 209, 0.92); }
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 18px;
+}
+
+.field{
+  background: rgba(255,255,255,0.60);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+.field b{
+  color:#d1949b;
+  display:block;
+  margin-bottom: 4px;
+}
+
+.field span{
+  color:#F1B4BB;
+  font-weight: bold;
+  font-size: 1.15em;
+}
+
+.orders{
+  margin-top: 18px;
+  display: grid;
+  gap: 14px;
+}
+
+.order-card{
+  background: rgba(255,255,255,0.55);
+  border-radius: 16px;
+  padding: 14px 16px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  border: 2px solid transparent;
+  transition: transform .25s ease, border-color .25s ease;
+}
+.order-card:hover{
+  transform: translateY(-4px);
+  border-color: #E3A5C7;
+}
+
+.order-card h3{
+  margin: 0 0 6px;
+  color:#d1949b;
+  font-size: 1.6em;
+}
+
+.order-card p{
+  margin: 6px 0;
+  color:#F1B4BB;
+  font-weight: bold;
+  font-size: 1.15em;
+}
+
+.order-items{
+  margin: 8px 0 0;
+  padding-left: 18px;
+  color:#F1B4BB;
+  font-weight: bold;
+  font-size: 1.05em;
+}
+
+/* logout */
+.logout{
+  margin-top: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: rgba(227, 165, 199, 0.88);
+  color: #fff3f3;
+  transition: transform .2s ease, background-color .2s ease;
+}
+.logout:hover{ transform: scale(1.03); background-color: rgba(209, 148, 155, 0.88); }
+
+.back{
+  display: inline-block;
+  margin: 18px auto 0;
+  text-decoration: none;
+  color: #fff3f3;
+  background: rgba(241, 180, 187, 0.6);
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: bold;
+  transition: transform .2s ease, background-color .2s ease;
+}
+.back:hover{ transform: scale(1.03); background: rgba(225, 175, 209, 0.75); }
+
+@media (max-width: 780px){
+  .grid{ grid-template-columns: 1fr; }
+  h1{ font-size: 3em; }
+}

@@ -2,6 +2,7 @@
     font-family:"Handlee",static ;
 }
 
+/* imagine fundal */
 body {
   background-image: url("background_image2.jpg");
   background-size: cover;      
@@ -10,11 +11,12 @@ body {
   background-position: center;  
 }
 
+/*stilizare titlu*/
 .title{
     text-align: center;
     flex:1 1 50px;
     color: #f1b4bb;
-    font-size: 2.5em;
+    font-size: 2.8em;
     border: 3px;
     border-color: mistyrose;
     text-shadow:
@@ -25,6 +27,7 @@ body {
      margin-bottom: 0.5em;
 }
 
+/* Grid responsive pentru cardurile de flori */
 .flower-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -32,7 +35,7 @@ body {
   padding: 40px;
 }
 
-
+/* Cardul unei flori (poza + text) */
 .flower-card {
   display: grid;
   grid-template-columns: 120px 1fr; 
@@ -50,14 +53,14 @@ body {
   border: 2px solid transparent;
 }
 
-
+/* ridicare + umbra mai pronuntata la hover */
 .flower-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1em 5em rgba(0, 0, 0, 0.15);
   border-color: #E3A5C7; 
 }
 
-
+/* Poza din card */
 .flower-card img {
   width: 100%;
   height: auto;
@@ -67,6 +70,7 @@ body {
   padding: 6px;
 }
 
+/* Titlul florii */
 .flower-info h3 {
   margin: 0 0 6px;
   font-size: 2rem;
@@ -74,25 +78,15 @@ body {
   font-weight: 600;
 }
 
+/* Descrierea florii */
 .flower-info p {
   margin: 0;
   color: #f1b4bb;
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 1.5;
 }
 
-@media (max-width: 600px) {
-  .flower-card {
-    grid-template-columns: 1fr; 
-    text-align: center;
-  }
-
-  .flower-card img {
-    max-width: 160px;
-    margin: 0 auto;
-  }
-}
-
+/* aceeasti stilizare la cutia dropdown ca in proiect.css */
 .corner-menu {
     position: fixed;
     top: 20px;
@@ -145,4 +139,18 @@ body {
     background-color: rgba(241, 180, 187, 0.3);
 }
 
+/* responsive */
+
+@media (max-width: 600px) {
+  /* devine vertical pe ecrane mici */
+  .flower-card {
+    grid-template-columns: 1fr; 
+    text-align: center;
+  }
+
+  .flower-card img {
+    max-width: 160px;
+    margin: 0 auto;
+  }
+}
 

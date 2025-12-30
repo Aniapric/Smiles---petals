@@ -9,12 +9,13 @@ html {
 
 body {
     background-image: url("background_image2.jpg");
-    background-size: cover;
+    background-size: cover; 
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
 }
 
+/* Containerul mare cu titlu + flori */
 .container1 {
     display: flex;
     justify-content: space-between;
@@ -22,10 +23,12 @@ body {
     text-align: center;
 }
 
+/* Titlul mare din mijloc */
 .title {
     flex: 1 1 50px;
     color: #F1B4BB;
     font-size: 50px;
+    /* contur alb-roz pentru text */
     text-shadow:
         -1px -1px 0 #f6a6a6,
          1px -1px 0 #f6a6a6,
@@ -33,6 +36,7 @@ body {
          1px  1px 0 #f6a6a6;
 }
 
+/* florile */
 .big_flower1 > img,
 .big_flower2 > img {
     flex: 1 1 300px;
@@ -48,6 +52,7 @@ body {
     min-width: 100px;
 }
 
+/* Liniile decorative */
 #hr,
 #hr_2 {
     border: none;
@@ -58,12 +63,14 @@ body {
     border-radius: 5px;
 }
 
+/* Layout pentru meniu + Catch phras */
 .container2 {
     height: 610px;
     display: grid;
     grid-template-columns: 1.7fr 3fr;
 }
 
+/* aliniere meniu */
 .menu {
     display: flex;
     align-items: center;
@@ -71,6 +78,7 @@ body {
     height: 600px;
 }
 
+/* cutiuta cu linkuri */
 .links {
     display: grid;
     grid-template-columns: 1fr;
@@ -80,14 +88,18 @@ body {
     width: 420px;
     justify-items: center;
     gap: 20px;
+    border-radius: 2em;
 }
 
+/* structura fiecare link */
 .links > div {
     width: 100%;
-    background-color: #ffd8d9;
+    background-color: rgb(255, 216, 217, 0.8);
     padding: 5px;
+    border-radius: 1em;
 }
 
+/* styling pt textul linkurilor */
 .links a {
     text-decoration: none;
     display: block;
@@ -98,20 +110,22 @@ body {
     padding: 15px;
     width: 100%;
     box-sizing: border-box;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease;  /* face animatia smooth */
+
 }
 
 .links a:hover {
     transform: scale(1.05);
 }
 
-
+/* Catch phrase  aliniere */
 .catch_phrase {
     display: flex;
     justify-content: center;;
     height: 500px;
 }
 
+/* ca sa avem text peste imagine */
 .shape_box {
     display: flex;
     justify-content: center;
@@ -125,14 +139,17 @@ body {
     color: #F1B4BB;
     font-size: 4em;
     text-align: center;
+    /* contur catch phrase */
+    /* cat se muta in dreapta /stanga, jos /sus, blur, culoare */
     text-shadow:
-        -1px -1px 1px #ffffff,
-         1px -1px 1px #ffffff,
-        -1px  1px 1px #ffffff,
-         1px  1px 1px #ffffff,
-        0 4px 8px rgba(0,0,0,0.05);
+        -1px -1px 1px #ffffff, /* stanga sus */
+         1px -1px 1px #ffffff, /* dreapta sus */
+        -1px  1px 1px #ffffff, /* stanga jos */
+         1px  1px 1px #ffffff, /* dreapta jos */
+        0 4px 8px rgba(0,0,0,0.05); /* umbra adancime */
 }
 
+/* imaginea din catch phrase - norul roz*/
 .shape_box > img {
     width: 50em;
     height: 50em;
@@ -140,11 +157,13 @@ body {
     max-width: 90%;
 }
 
+/* textul inainte de galerie aliniere */
 .text2 {
     display: block;
     background-color: rgb(255, 216, 217, 0.8);
 }
 
+/* stilizare la text2 (inainte de galerie) */
 .container3 h2 {
     text-align: center;
     color: #F1B4BB;
@@ -159,6 +178,7 @@ body {
     margin-bottom: 80px;
 }
 
+/* galerie - layout responsive cu grid*/
 .picture_gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -170,7 +190,7 @@ body {
 .picture_gallery img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* imaginea umple containerul */
     border-radius: 12px;
     display: block;
     transition: transform 0.3s ease;
@@ -180,19 +200,21 @@ body {
     transform: scale(1.05);
 }
 
+/* imagini late */
 .picture_gallery img.wide {
     grid-column: span 2;
 }
 
+/* imagini inalte */
 .picture_gallery img.tall {
     grid-row: span 2;
 }
-
+/* Secțiunea de contact */
 #contact {
     margin-top: 2em;
     display: flex;
     background-color: rgb(255, 216, 217, 0.8);
-    color: oklch(82.782% 0.07148 11.014);
+    color: rgb(241, 180, 187);
     font-size: 2em;
     font-weight: bold;
 }
@@ -210,7 +232,6 @@ body {
 }
 
 .program {
-    margin-left: 2em;
     background-color: rgba(255, 255, 255, 0.2);
     border: 0.3em dotted #f2f2f2;
     border-radius: 1em;
@@ -220,10 +241,12 @@ body {
     max-width: 25em;
 }
 
+/* Stilizare pentru titlul "program" */
 .program h3 {
     margin-bottom: -0.2em;
 }
 
+/* Linie decorativă sub titlul "Contact details" */
 .contact_details h2::after {
     content: "";
     position: absolute;
@@ -235,20 +258,21 @@ body {
     border-radius: 5px;
 }
 
-
+/* Meniu colt dreapta sus */
 .corner-menu {
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 9999;
+    z-index: 9999; /* deasupra la orice element */
 }
 
+/* Stilizare pentru iconița meniului */
 .menu-icon {
     font-size: 32px;
     background-color: rgba(255, 225, 230, 0.8);
     padding: 10px 16px;
     border-radius: 10px;
-    cursor: pointer;
+    cursor: pointer; /* arata ca un buton */
     box-shadow: 0 3px 10px rgba(0,0,0,0.15);
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
@@ -258,6 +282,7 @@ body {
     background-color: rgba(241, 180, 187, 0.9);
 }
 
+/* Stilizare pentru cutia dropdown */
 .dropdown-box {
     display: none;
     position: absolute;
@@ -270,10 +295,12 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
+/* apare cutia dropdown la hover */
 .corner-menu:hover .dropdown-box {
     display: block;
 }
 
+/* Stilizare pentru linkurile din dropdown */
 .dropdown-box a {
     display: block;
     padding: 10px 15px;
@@ -289,9 +316,10 @@ body {
 }
 
 
+/* Media Queries pentru responsive design */
 
 @media (max-width: 768px) {
-
+/* special pentru tablete */
     .container2 {
         grid-template-columns: 1fr;
         height: auto;
@@ -340,7 +368,7 @@ body {
 }
 
 @media (max-width: 600px) {
-
+/* Design pentru telefoane mici */
     .title {
         font-size: 30px;
         text-align: center;
@@ -374,7 +402,7 @@ body {
 }
 
 @media (max-width: 480px) {
-
+/* Design pentru telefoane foarte mici */
     .links {
         width: 100%;
     }

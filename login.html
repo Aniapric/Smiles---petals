@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login / Register</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+
+<body>
+  
+  <div class="corner-menu">
+    <div class="menu-icon">☰</div>
+    <div class="dropdown-box">
+      <a href="index.html">Home</a>
+      <a href="garden.html">Our Magical Garden</a>
+      <a href="flower_shop.html">Shop</a>
+      <a href="cart.html">My Cart</a>
+      <a href="index.html#contact">Contact Details</a>
+      <a href="account.html">My account</a>
+    </div>
+  </div>
+
+  <div class="page">
+    <h1>👤 My Account</h1>
+
+    <div class="box">
+      <h2>Login / Create account</h2>
+
+      <form id="authForm" novalidate>
+        <label>
+          Name
+          <input id="name" type="text" placeholder="Ana Popescu" />
+        </label>
+
+        <label>
+          Email
+          <input id="email" type="email" placeholder="ana@gmail.com" required />
+        </label>
+
+        <label>
+          Password
+          <input id="password" type="password" placeholder="Min 6 chars" required />
+        </label>
+
+        <label>Country <input id="country" type="text"></label>
+        <label>County <input id="county" type="text"></label>
+        <label>City <input id="city" type="text"></label>
+        <label>Address <input id="address" type="text"></label>
+        <label>Date of birth <input id="dob" type="date"></label>
+
+        <div class="row">
+          <button type="button" id="registerBtn">Create account</button>
+          <button type="button" id="loginBtn">Login</button>
+        </div>
+
+        <p class="msg" id="msg"></p>
+      </form>
+
+      <button class="logout" id="logoutBtn" type="button">Logout</button>
+    </div>
+
+    <a class="back" href="index.html">← Back home</a>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

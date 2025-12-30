@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="cart.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Cart</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="corner-menu">
+    <div class="menu-icon">☰</div>
+    <div class="dropdown-box">
+      <a href="index.html">Home</a>
+      <a href="garden.html">Our Magical Garden</a>
+      <a href="flower_shop.html">Shop</a>
+      <a href="cart.html">My Cart</a>
+      <a href="index.html#contact">Contact Details</a>
+      <a href="account.html">My account</a>
+    </div>
+  </div>
+
+  <h1>🛒 My Cart</h1>
+
+  <!-- mesaj cart gol -->
+  <div id="emptyCartMsg">🌷 Your cart is empty 🌷</div>
+
+  <div id="cart">
+
+    <div id="cartContainer"></div>
+
+    <div id="Cart-info">
+      <h2>Order Summary</h2>
+      <hr class="summary-hr">
+
+      <h2 id="totalItems"></h2>
+      <h2 id="deliveryFees"></h2>
+      <h2 id="totalPrice"></h2>
+
+      <button id="checkoutBtn">Place Order</button>
+    </div>
+
+  </div>
+
+  <a class="back-to-shop" href="flower_shop.html">← Back to shop</a>
+
+  <script src="cart.js"></script>
+</body>
+</html>

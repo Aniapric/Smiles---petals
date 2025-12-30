@@ -1,0 +1,12 @@
+[
+  { "id": 1, "name": "Yellow Tones Bouquet", "price": 29.99, "image": "imagini/flower_bouquet/bou1.png", "category": "warm" },
+  { "id": 2, "name": "Summer Blooms Bouquet", "price": 34.50, "image": "imagini/flower_bouquet/bou2.png", "category": "seasonal" },
+  { "id": 3, "name": "Light Blue Bouquet", "price": 27.00, "image": "imagini/flower_bouquet/bou3.png", "category": "cool" },
+  { "id": 4, "name": "Pure White Bouquet", "price": 31.20, "image": "imagini/flower_bouquet/bou4.png", "category": "classic" },
+  { "id": 5, "name": "Autumn Vibes Bouquet", "price": 33.00, "image": "imagini/flower_bouquet/bou5.png", "category": "seasonal" },
+  { "id": 6, "name": "Hydrangeas Bouquet", "price": 36.80, "image": "imagini/flower_bouquet/bou6.png", "category": "classic" },
+  { "id": 7, "name": "Romantic Roses Bouquet", "price": 42.00, "image": "imagini/flower_bouquet/bou7.png", "category": "romantic" },
+  { "id": 8, "name": "Pastels Bouquet", "price": 28.90, "image": "imagini/flower_bouquet/bou8.png", "category": "pastel" },
+  { "id": 9, "name": "Pink Lilies Bouquet", "price": 37.50, "image": "imagini/flower_bouquet/bou9.png", "category": "romantic" },
+  { "id": 10, "name": "Peonies Bouquet", "price": 39.99, "image": "imagini/flower_bouquet/bou10.png", "category": "classic" }
+]

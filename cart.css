@@ -1,0 +1,328 @@
+*{
+  font-family: "Handlee", static;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* fundal */
+body{
+  background-image: url("background_image2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* titlu pagina */
+h1{
+  text-align: left;
+  flex:1 1 50px;
+  color: #f1b4bb;
+  font-size: 5em;
+  border: 3px;
+  border-color: mistyrose;
+  text-shadow:
+    -1px -1px 0 #f6a6a6,
+     1px -1px 0 #f6a6a6,
+    -1px  1px 0 #f6a6a6,
+     1px  1px 0 #f6a6a6;
+  margin-bottom: 0.3em;
+  margin-left: 2.3em;
+}
+
+/* mesaj cart gol */
+#emptyCartMsg{
+  display: none;
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+  color: #F1B4BB;
+  margin: 2.2em auto 0;
+  width: min(900px, 92%);
+  text-shadow:
+    -1px -1px 0 #ffffff,
+     1px -1px 0 #ffffff,
+    -1px  1px 0 #ffffff,
+     1px  1px 0 #ffffff;
+}
+
+#cart{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: start;
+  align-items: start;
+  margin-bottom: 1em;
+}
+
+/* container principal cart */
+#cartContainer{
+  width: 35em;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+/* fiecare produs din cart (div-urile create din JS) */
+#cartContainer > div{
+  background-color: rgba(255, 225, 228, 0.7);
+  height: 7.1em;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 18px 22px;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.6s ease,
+    background-color 0.8s ease,
+    border-color 1s ease;
+
+  border: 2px solid transparent;
+}
+
+#cartContainer > div:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 1em 5em rgba(0, 0, 0, 0.15);
+  border-color: #E3A5C7;
+}
+
+/* text in card */
+#cartContainer p{
+  margin: 6px 0;
+  color: #f1b4bb;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+#cartContainer strong{
+  color: #d1949b;
+  font-size: 1.2em;
+}
+
+/* linia (hr) din card */
+#cartContainer hr{
+  border: none;
+  height: 4px;
+  background-color: rgba(246, 193, 199, 0.9);
+  border-radius: 6px;
+  margin: 14px 0 0;
+}
+
+/* ===== Order Summary box ===== */
+#Cart-info{
+  margin-top: 1.3em;
+  background-color: rgba(255, 216, 217, 0.75);
+  border-radius: 18px;
+  padding: 18px 20px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.10);
+  height: fit-content;
+  text-align: center;
+}
+
+#Cart-info h2{
+  color: #f1b4bb;
+  font-size: 2em;
+  margin: 6px 0;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* primul titlu "Order Summary" */
+#Cart-info h2:first-child{
+  color: #d1949b;
+  font-size: 2.3em;
+  text-align: center;
+}
+
+/* hr decorativ sub Order Summary */
+.summary-hr{
+  border: none;
+  height: 4px;
+  background-color: rgba(246, 193, 199, 0.9);
+  border-radius: 6px;
+  margin: 14px 0 20px;
+}
+
+/* Total items puțin mai jos */
+#totalItems{
+  margin-top: 22px;
+}
+
+/* total badge */
+#Cart-info #totalPrice{
+  margin-top: 45px;
+  margin-bottom: 18px;
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+
+  background-color: rgba(255, 216, 217, 0.8);
+  border-radius: 16px;
+  padding: 14px 22px;
+
+  color: #d1949b;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* butonul Place Order centrat */
+#checkoutBtn{
+  display: block;
+  margin: 14px auto 0;
+  background-color: rgba(241, 180, 187, 0.85);
+  color: #fff3f3;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+#checkoutBtn:hover{
+  transform: scale(1.05);
+  background-color: rgba(225, 175, 209, 0.9);
+}
+
+#checkoutBtn:disabled{
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* link back */
+.back-to-shop{
+  margin-top: 3em;
+  display: block;
+  margin: 0 auto 35px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.7em;
+  font-weight: bold;
+  color: #fff3f3;
+
+  background-color: rgba(241, 180, 187, 0.65);
+  padding: 10px 18px;
+  border-radius: 12px;
+
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.back-to-shop:hover{
+  transform: scale(1.05);
+  background-color: rgba(225, 175, 209, 0.85);
+}
+
+/* ======= dropdown menu ======= */
+.corner-menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.menu-icon {
+  font-size: 32px;
+  background-color: rgba(255, 225, 230, 0.8);
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-icon:hover {
+  transform: scale(1.07);
+  background-color: rgba(241, 180, 187, 0.9);
+}
+
+.dropdown-box {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: rgba(255, 225, 230, 0.95);
+  border-radius: 10px;
+  padding: 12px 0;
+  width: 200px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.corner-menu:hover .dropdown-box {
+  display: block;
+}
+
+.dropdown-box a {
+  display: block;
+  padding: 10px 15px;
+  color: #F1B4BB;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  background: none;
+  margin: 0;
+  border-radius: 0;
+  text-align: left;
+}
+
+.dropdown-box a:hover {
+  background-color: rgba(241, 180, 187, 0.3);
+  transform: none;
+}
+
+/* ===== titlu centrat când cartul e gol ===== */
+body.cart-empty h1{
+  text-align: center;
+  margin-left: 0;
+  margin-top: 1.5em;
+}
+
+/* responsive */
+@media (max-width: 900px){
+  #cart{
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  #cartContainer{
+    width: min(35em, 92%);
+  }
+
+  #Cart-info{
+    width: min(420px, 92%);
+    margin-bottom: 1.5em;
+  }
+}
+
+@media (max-width: 600px){
+  h1{
+    font-size: 2.8em;
+    margin-left: 0.8em;
+  }
+
+  #cartContainer p{
+    font-size: 1.25em;
+  }
+
+  #totalPrice{
+    font-size: 1.8em;
+  }
+
+  .back-to-shop{
+    font-size: 1.3em;
+  }
+
+  #emptyCartMsg{
+    font-size: 2.2em;
+  }
+}
