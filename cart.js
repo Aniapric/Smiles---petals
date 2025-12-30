@@ -32,7 +32,6 @@ function renderCart() {
     cartInfo.style.display = "none";
     checkoutBtn.disabled = true;
 
-    // ADAUGĂM clasa pe body
     document.body.classList.add("cart-empty");
 
     totalItemsEl.textContent = "";
@@ -46,7 +45,7 @@ function renderCart() {
   cartInfo.style.display = "block";
   checkoutBtn.disabled = false;
 
-  // SCOATEM clasa
+  // scot clasa
   document.body.classList.remove("cart-empty");
 
   let itemsTotal = 0;
