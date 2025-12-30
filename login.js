@@ -14,10 +14,8 @@ const logoutBtn = document.getElementById("logoutBtn");
 
 const msg = document.getElementById("msg");
 
-// regex (cerință)
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-// optional: un regex simplu pt nume/locație (litere + spații + -)
 const textRegex = /^[A-Za-zÀ-ž\s\-]{2,}$/;
 
 function readUsers(){
@@ -43,7 +41,7 @@ function redirectAfterLogin(){
 }
 
 function calcAge(dobStr){
-  // dobStr e de forma "YYYY-MM-DD"
+
   const dob = new Date(dobStr);
   if (isNaN(dob.getTime())) return null;
 
@@ -78,8 +76,6 @@ registerBtn.addEventListener("click", function(){
     setMessage("Password must be at least 6 characters.");
     return;
   }
-
-  // câmpuri extra (simple)
   if (!country || !textRegex.test(country)){
     setMessage("Please enter a valid country.");
     return;
@@ -123,14 +119,13 @@ registerBtn.addEventListener("click", function(){
   users.push(user);
   saveUsers(users);
 
-  // sesiune (cerință) - salvăm și detaliile ca să le afișezi în account.html
   localStorage.setItem(
     "currentUser",
     JSON.stringify({ name, email, country, county, city, address, dob })
   );
 
   setMessage("Account created ✅", true);
-  setTimeout(redirectAfterLogin, 600); // setTimeout (cerință)
+  setTimeout(redirectAfterLogin, 600); 
 });
 
 loginBtn.addEventListener("click", function(){
@@ -150,7 +145,7 @@ loginBtn.addEventListener("click", function(){
     return;
   }
 
-  // punem în sesiune TOATE datele (ca să se vadă pe account.html)
+  // punem în sesiune toate datele 
   localStorage.setItem(
     "currentUser",
     JSON.stringify({
