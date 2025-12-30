@@ -1,8 +1,5 @@
 const container = document.getElementById("bouquetContainer");
 
-/* =========================
-   CART - localStorage
-========================= */
 function readCart() {
   return JSON.parse(localStorage.getItem("cart")) || [];
 }
@@ -34,9 +31,6 @@ function addToCart(product) {
   alert(product.name + " a fost adăugat în coș!");
 }
 
-/* =========================
-   LOAD PRODUCTS (AJAX)
-========================= */
 function loadProducts() {
   fetch("data/products.json")
     .then(function (response) {
